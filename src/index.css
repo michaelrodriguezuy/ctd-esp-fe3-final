@@ -1,0 +1,284 @@
+:root {
+  --text-color-light: #000000;
+  --background-color-light: #ffffff;
+  --button-background-light: #f9f9f9;
+
+  --text-color-dark: rgba(255, 255, 255, 0.87);
+  --background-color-dark: #535151;
+  --button-background-dark: #474747;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+body {  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.favButton {
+  background-color: rgba(136, 136, 136, 0.116);
+  padding: 1em;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.favButton:hover {
+  background-color: rgba(16, 77, 168, 0.5);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+h2 {
+  margin-top: 0;
+}
+h3,
+h4 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  align-items: center;
+}
+.navbar-space{
+  background-color: #3b6ca7;
+  width: 100%;
+  height: 0.01em;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0 1em;
+}
+
+a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(136, 136, 136);
+}
+
+footer {
+  padding-top: 1.5em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  bottom: 0;
+  height: 3em;
+}
+.footer-space {
+  background-color: #3b6ca7;
+  width: 100%;
+  height: 2em;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+}
+
+.footer-text > img {
+  width: 200px;
+  margin: 0;
+}
+.footer-text > p {
+  margin: 0.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5em;
+}
+
+.button-form {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: var(--button-background-dark);
+  color: var(--text-color-dark);
+  margin-bottom: 1em;
+  width: 17em;
+}
+
+.button-favs-clean {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 6rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+  text-align: center;
+  font-size: small;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.button-favs-clean:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 0 6rem;
+  margin: 0 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+  box-sizing: border-box;
+  text-align: center;
+  height: 100%;
+}
+
+.card:hover {
+  border: 0.5px solid rgb(206, 217, 142);
+}
+.card > img {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #978787;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tbody tr:hover {
+  background-color: #bbb8b8;
+}
+
+.button-theme {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: var(--button-background-dark);
+}
+
+/* dark */
+.dark {    
+  color: var(--text-color-dark);
+  background-color: var(--background-color-dark);
+}
+
+.dark a {
+  color: var(--text-color-dark);
+}
+.dark a:hover {
+  color: rgb(136, 136, 136);
+}
+.dark .button-theme {
+  background-color: var(--button-background-light);
+  color: var(--text-color-light);
+}
+.dark .button-form {
+  background-color: var(--button-background-light);
+  color: var(--text-color-light);
+}
+
+/* light */
+/* 
+.light {  
+  color: var(--text-color-light);
+  background-color: var(--background-color-light);
+}
+
+.light a {
+  color: var(--text-color-light);
+}
+.light a:hover {
+  color: rgb(136, 136, 136);
+}
+
+.light .button-theme {
+  background-color: var(--button-background-dark);
+  color: var(--text-color-dark);
+} 
+.light > form .button-form {
+  background-color: var(--button-background-dark);
+  color: var(--text-color-dark);
+}
+*/
